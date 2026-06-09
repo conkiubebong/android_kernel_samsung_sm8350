@@ -34,7 +34,7 @@ COMMON_MAKE_ARGS=(
 )
 
 # 1) defconfig
-make "${COMMON_MAKE_ARGS[@]}" vendor/stock/b2q_kor_singlex_defconfig
+make "${COMMON_MAKE_ARGS[@]}" vendor/b2q_kor_singlex_defconfig
 
 # 2) build kernel + in-tree + techpack modules
 make "${COMMON_MAKE_ARGS[@]}"
