@@ -98,9 +98,9 @@ fi
 mkdir -p ramdisk_extracted
 ( cd ramdisk_extracted && cpio -i --no-absolute-filenames < ../ramdisk.cpio )
 
-# Bơm tất cả *.ko mới build vào ramdisk_extracted/lib/modules/
-# Vendor ramdisk Samsung để modules thẳng trong /lib/modules (KHÔNG có subdir theo version).
-MOD_DST="ramdisk_extracted/lib/modules"
+# Bơm *.ko mới build vào ramdisk_extracted/lib/modules/5.4-gki/
+# Z Flip 3 (b2q) Samsung dùng subdir cố định "5.4-gki" thay vì version thật.
+MOD_DST="ramdisk_extracted/lib/modules/5.4-gki"
 mkdir -p "$MOD_DST"
 
 echo "==> Copy modules built ra $MOD_DST"
